@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6A0A6F816AA028B609776DA2 /* Pods_DepositCalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5606587F7C4CAA6C6088D104 /* Pods_DepositCalculatorApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0C2528CABD1BA7FE22D7B6F0 /* Pods-DepositCalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositCalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-DepositCalculatorApp/Pods-DepositCalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
+		5606587F7C4CAA6C6088D104 /* Pods_DepositCalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepositCalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716761A42D0856E300D3128F /* DepositCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepositCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA635D5AC3EB53E23C4CBF3 /* Pods-DepositCalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositCalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-DepositCalculatorApp/Pods-DepositCalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0A6F816AA028B609776DA2 /* Pods_DepositCalculatorApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6ABD81FDFFECE27248716359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AA635D5AC3EB53E23C4CBF3 /* Pods-DepositCalculatorApp.debug.xcconfig */,
+				0C2528CABD1BA7FE22D7B6F0 /* Pods-DepositCalculatorApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7167619B2D0856E200D3128F = {
 			isa = PBXGroup;
 			children = (
 				716761A62D0856E300D3128F /* DepositCalculatorApp */,
 				716761A52D0856E300D3128F /* Products */,
+				6ABD81FDFFECE27248716359 /* Pods */,
+				731D018ED255F24AD7452E04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		731D018ED255F24AD7452E04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5606587F7C4CAA6C6088D104 /* Pods_DepositCalculatorApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716761B72D0856E600D3128F /* Build configuration list for PBXNativeTarget "DepositCalculatorApp" */;
 			buildPhases = (
+				ADA83002F3F25EC6D0EFCABF /* [CP] Check Pods Manifest.lock */,
 				716761A02D0856E300D3128F /* Sources */,
 				716761A12D0856E300D3128F /* Frameworks */,
 				716761A22D0856E300D3128F /* Resources */,
+				BBF5A45EFFD6E158F53D4F3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				716761A62D0856E300D3128F /* DepositCalculatorApp */,
 			);
 			name = DepositCalculatorApp;
-			packageProductDependencies = (
-			);
 			productName = DepositCalculatorApp;
 			productReference = 716761A42D0856E300D3128F /* DepositCalculatorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADA83002F3F25EC6D0EFCABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepositCalculatorApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBF5A45EFFD6E158F53D4F3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DepositCalculatorApp/Pods-DepositCalculatorApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DepositCalculatorApp/Pods-DepositCalculatorApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DepositCalculatorApp/Pods-DepositCalculatorApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		716761A02D0856E300D3128F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		716761B82D0856E600D3128F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AA635D5AC3EB53E23C4CBF3 /* Pods-DepositCalculatorApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -159,14 +229,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daulet.DepositCalculatorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		716761B92D0856E600D3128F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2528CABD1BA7FE22D7B6F0 /* Pods-DepositCalculatorApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -186,9 +261,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daulet.DepositCalculatorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -229,7 +308,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +371,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
